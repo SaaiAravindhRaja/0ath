@@ -15,8 +15,18 @@ describe("resolution policy", () => {
     const result = resolveOathProof(oath, [
       ...seedState.evidence,
       { ...seedState.evidence[0], id: "deploy", type: "deployment", value: "https://0ath.vercel.app" },
-      { ...seedState.evidence[0], id: "arc", type: "arc_tx", value: `0x${"a".repeat(64)}` }
+      { ...seedState.evidence[0], id: "arc", type: "arc_tx", value: `https://testnet.arcscan.app/tx/0x${"a".repeat(64)}` }
     ]);
     expect(result.status).toBe("fulfilled");
+  });
+
+  it("does not fulfill on raw transaction-hash-shaped proof", () => {
+    const result = resolveOathProof(oath, [
+      ...seedState.evidence,
+      { ...seedState.evidence[0], id: "deploy", type: "deployment", value: "https://0ath.vercel.app" },
+      { ...seedState.evidence[0], id: "arc", type: "arc_tx", value: `0x${"a".repeat(64)}` }
+    ]);
+    expect(result.status).toBe("pending-evidence");
+    expect(result.missingProof).toContain("arc_tx");
   });
 });

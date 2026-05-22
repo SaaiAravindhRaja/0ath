@@ -19,7 +19,7 @@ pnpm install
 pnpm dev
 ```
 
-Local write actions use `ADMIN_INVITE_CODE=local-admin` unless overridden. Production should set a real invite code and never expose Arc signer secrets to the client.
+Local participant write actions use `PARTICIPANT_INVITE_CODE=local-invite`; operator actions use `ADMIN_INVITE_CODE=local-admin` unless overridden. Production should set real separate codes and never expose Arc signer secrets to the client. Production writes are disabled unless `ALLOW_LOCAL_STORE_IN_PRODUCTION=true` is explicitly set for a demo-only deployment.
 
 ## Commands
 
@@ -36,6 +36,7 @@ pnpm check
 ## Arc Receipt
 
 The receipt contract is non-custodial. It emits metadata hashes only and does not hold funds.
+Only the configured recorder wallet can emit receipt events; judges should verify ArcScan events were sent by that recorder.
 
 Human-input placeholders before final submission:
 

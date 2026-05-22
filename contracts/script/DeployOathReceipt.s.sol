@@ -6,8 +6,9 @@ import {OathReceipt} from "../src/OathReceipt.sol";
 
 contract DeployOathReceipt is Script {
     function run() external returns (OathReceipt receipt) {
+        address recorder = vm.envOr("ARC_RECEIPT_RECORDER", address(0));
         vm.startBroadcast();
-        receipt = new OathReceipt();
+        receipt = new OathReceipt(recorder);
         vm.stopBroadcast();
     }
 }

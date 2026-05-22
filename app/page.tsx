@@ -3,6 +3,8 @@ import { OathList } from "@/components/oath/oath-list";
 import { TractionSummary } from "@/components/oath/traction-summary";
 import { metricsFromState, store } from "@/lib/data/store";
 
+export const dynamic = "force-dynamic";
+
 export default async function HomePage() {
   const state = await store.getState();
   const metrics = metricsFromState(state);

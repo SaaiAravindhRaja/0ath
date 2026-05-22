@@ -17,7 +17,11 @@ export function classifyEvidence(type: EvidenceType, value: string): SafetyResul
   }
   const arcTxPattern = new RegExp(`^(0x[a-fA-F0-9]{64}|https://testnet\\\\.arcscan\\\\.app/tx/0x[a-fA-F0-9]{64})$`);
   if (type === "arc_tx" && arcTxPattern.test(trimmed)) {
-    return { state: "accepted", note: "Arc transaction reference accepted." };
+    const confirmedShape = /^https:\/\/testnet\.arcscan\.app\/tx\/0x[a-fA-F0-9]{64}$/i.test(trimmed);
+    return {
+      state: confirmedShape ? "accepted" : "pending",
+      note: confirmedShape ? "ArcScan transaction reference accepted." : "Raw transaction hash requires operator review."
+    };
   }
   try {
     const url = new URL(trimmed);

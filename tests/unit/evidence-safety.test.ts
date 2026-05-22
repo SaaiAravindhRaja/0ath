@@ -14,4 +14,8 @@ describe("evidence safety", () => {
     const tx = `https://testnet.arcscan.app/tx/0x${"a".repeat(64)}`;
     expect(classifyEvidence("arc_tx", tx).state).toBe("accepted");
   });
+
+  it("keeps raw tx hashes pending until operator review", () => {
+    expect(classifyEvidence("arc_tx", `0x${"a".repeat(64)}`).state).toBe("pending");
+  });
 });

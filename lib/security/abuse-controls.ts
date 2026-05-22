@@ -5,22 +5,33 @@ export type Actor = {
   id: string;
   roles: ParticipantRole[];
   verified: boolean;
+  authScope: "participant" | "admin";
 };
 
-export function expectedInviteCode() {
-  if (process.env.ADMIN_INVITE_CODE) return process.env.ADMIN_INVITE_CODE;
-  return process.env.NODE_ENV === "production" ? "" : "local-admin";
+export function expectedInviteCode(scope: "participant" | "admin" = "participant") {
+  if (scope === "admin") {
+    if (process.env.ADMIN_INVITE_CODE) return process.env.ADMIN_INVITE_CODE;
+    return process.env.NODE_ENV === "production" ? "" : "local-admin";
+  }
+  if (process.env.PARTICIPANT_INVITE_CODE) return process.env.PARTICIPANT_INVITE_CODE;
+  return process.env.NODE_ENV === "production" ? "" : "local-invite";
 }
 
-export function buildActor(label: string, inviteCode: string | undefined, roles: ParticipantRole[] = ["contributor"]): Actor {
-  const expected = expectedInviteCode();
+export function buildActor(
+  label: string,
+  inviteCode: string | undefined,
+  roles: ParticipantRole[] = ["contributor"],
+  authScope: "participant" | "admin" = roles.includes("admin") ? "admin" : "participant"
+): Actor {
+  const expected = expectedInviteCode(authScope);
   const verified = Boolean(expected && inviteCode === expected);
   const clean = label.trim();
   return {
     label: clean,
     id: participantId(clean),
     roles,
-    verified
+    verified,
+    authScope
   };
 }
 
@@ -38,7 +49,7 @@ export function participantFromActor(actor: Actor, source: "seed" | "live" = "li
     canonicalLabel: canonicalizeLabel(actor.label),
     roles: actor.roles,
     realParticipant: source === "live" && actor.verified,
-    verifiedBy: actor.roles.includes("admin") ? "admin" : "invite",
+    verifiedBy: actor.authScope === "admin" ? "admin" : "invite",
     source
   };
 }

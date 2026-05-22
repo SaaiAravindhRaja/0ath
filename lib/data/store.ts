@@ -1,17 +1,24 @@
-import { addEvidence, addEvidenceRequest, addPosition, addReceipt, addReview, createOath, getState, redactEvidence, updateOathStatus, upsertParticipant } from "./local-store";
+import * as localStore from "./local-store";
+import { neonStoreUnavailable } from "./neon-store";
 import type { EvidenceType } from "@/lib/domain/evidence";
 
+const productionReadOnly = process.env.NODE_ENV === "production" && process.env.ALLOW_LOCAL_STORE_IN_PRODUCTION !== "true";
+
+function writeBlocked() {
+  return neonStoreUnavailable();
+}
+
 export const store = {
-  getState,
-  upsertParticipant,
-  createOath,
-  updateOathStatus,
-  addPosition,
-  addEvidence,
-  addEvidenceRequest,
-  redactEvidence,
-  addReview,
-  addReceipt
+  getState: localStore.getState,
+  upsertParticipant: productionReadOnly ? writeBlocked : localStore.upsertParticipant,
+  createOath: productionReadOnly ? writeBlocked : localStore.createOath,
+  updateOathStatus: productionReadOnly ? writeBlocked : localStore.updateOathStatus,
+  addPosition: productionReadOnly ? writeBlocked : localStore.addPosition,
+  addEvidence: productionReadOnly ? writeBlocked : localStore.addEvidence,
+  addEvidenceRequest: productionReadOnly ? writeBlocked : localStore.addEvidenceRequest,
+  redactEvidence: productionReadOnly ? writeBlocked : localStore.redactEvidence,
+  addReview: productionReadOnly ? writeBlocked : localStore.addReview,
+  addReceipt: productionReadOnly ? writeBlocked : localStore.addReceipt
 };
 
 export async function getOathBundle(oathId: string) {

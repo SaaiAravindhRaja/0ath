@@ -5,6 +5,7 @@ import { scoreClaim } from "@/lib/agent/claim-quality";
 import { traceReview } from "@/lib/agent/reasoning-trace";
 import { getOathBundle, store } from "@/lib/data/store";
 import { buildActor, requireActor } from "@/lib/security/abuse-controls";
+import { actorSchema, validationError } from "@/lib/security/request-validation";
 import { shortId, sha256 } from "@/lib/utils/hash";
 
 async function readActorPayload(request: Request) {
@@ -20,7 +21,12 @@ async function readActorPayload(request: Request) {
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const body = await readActorPayload(request);
-  const actor = buildActor(String(body.actorLabel ?? ""), String(body.inviteCode ?? ""), ["admin"]);
+  const parsed = actorSchema.safeParse({
+    actorLabel: String(body.actorLabel ?? ""),
+    inviteCode: String(body.inviteCode ?? "")
+  });
+  if (!parsed.success) return NextResponse.json({ error: validationError(parsed.error) }, { status: 400 });
+  const actor = buildActor(parsed.data.actorLabel, parsed.data.inviteCode, ["admin"], "admin");
   const authError = requireActor(actor, "admin");
   if (authError) return NextResponse.json({ error: authError }, { status: 403 });
   const bundle = await getOathBundle(id);
@@ -56,7 +62,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   };
   const reviewResult = await store.addReview(review);
   if (!reviewResult.ok) return NextResponse.json({ error: reviewResult.error }, { status: 400 });
-  const receipt = buildReceipt(review, sha256(bundle.positions));
-  await store.addReceipt(receipt);
-  return NextResponse.redirect(new URL(`/oaths/${id}`, request.url));
+  const receipt = buildReceipt(review, sha256(bundle.positions), sha256(bundle.evidence));
+  const receiptResult = await store.addReceipt(receipt);
+  if (!receiptResult.ok) return NextResponse.json({ error: receiptResult.error }, { status: 400 });
+  return NextResponse.redirect(new URL(`/oaths/${id}`, request.url), 303);
 }

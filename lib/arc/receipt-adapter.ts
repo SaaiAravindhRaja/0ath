@@ -6,9 +6,9 @@ import { getArcConfig } from "./config";
 import { sha256, shortId } from "@/lib/utils/hash";
 
 const abi = parseAbi(["function recordReceipt(bytes32 oathHash, bytes32 receiptHash, string status, bytes32 evidenceHash, bytes32 reasoningHash, bytes32 ledgerHash)"]);
+const ARC_TIMEOUT_MS = 20_000;
 
-export function buildReceipt(review: AgentReview, ledgerHash: string): Receipt {
-  const evidenceHash = review.evidenceSnapshotHash;
+export function buildReceipt(review: AgentReview, ledgerHash: string, evidenceHash = review.evidenceSnapshotHash): Receipt {
   const receiptHash = sha256({ reviewId: review.id, status: review.status, evidenceHash, ledgerHash, reasoningHash: review.reasoningHash });
   const now = new Date().toISOString();
   return {
@@ -24,6 +24,22 @@ export function buildReceipt(review: AgentReview, ledgerHash: string): Receipt {
     createdAt: now,
     updatedAt: now
   };
+}
+
+function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(() => reject(new Error("Arc transaction timed out.")), ms);
+    promise.then(
+      (value) => {
+        clearTimeout(timer);
+        resolve(value);
+      },
+      (error) => {
+        clearTimeout(timer);
+        reject(error);
+      }
+    );
+  });
 }
 
 export async function notarizeReceipt(receipt: Receipt): Promise<Receipt> {
@@ -48,26 +64,39 @@ export async function notarizeReceipt(receipt: Receipt): Promise<Receipt> {
   const client = createWalletClient({ account, chain, transport: http(config.rpcUrl) });
   const publicClient = createPublicClient({ chain, transport: http(config.rpcUrl) });
 
-  const hash = await client.writeContract({
-    address: config.contractAddress as `0x${string}`,
-    abi,
-    functionName: "recordReceipt",
-    args: [
-      `0x${sha256(receipt.oathId)}` as `0x${string}`,
-      `0x${receipt.receiptHash}` as `0x${string}`,
-      receipt.status,
-      `0x${receipt.evidenceHash}` as `0x${string}`,
-      `0x${receipt.reasoningHash}` as `0x${string}`,
-      `0x${receipt.ledgerHash}` as `0x${string}`
-    ]
-  });
-  await publicClient.waitForTransactionReceipt({ hash });
-  return {
-    ...receipt,
-    state: "arc_confirmed",
-    txHash: hash,
-    chainId: config.chainId,
-    explorerUrl: `${config.explorerBase}/tx/${hash}`,
-    updatedAt: new Date().toISOString()
-  };
+  try {
+    const hash = await withTimeout(
+      client.writeContract({
+        address: config.contractAddress as `0x${string}`,
+        abi,
+        functionName: "recordReceipt",
+        args: [
+          `0x${sha256(receipt.oathId)}` as `0x${string}`,
+          `0x${receipt.receiptHash}` as `0x${string}`,
+          receipt.status,
+          `0x${receipt.evidenceHash}` as `0x${string}`,
+          `0x${receipt.reasoningHash}` as `0x${string}`,
+          `0x${receipt.ledgerHash}` as `0x${string}`
+        ]
+      }),
+      ARC_TIMEOUT_MS
+    );
+    await withTimeout(publicClient.waitForTransactionReceipt({ hash }), ARC_TIMEOUT_MS);
+    return {
+      ...receipt,
+      state: "arc_confirmed",
+      txHash: hash,
+      chainId: config.chainId,
+      explorerUrl: `${config.explorerBase}/tx/${hash}`,
+      updatedAt: new Date().toISOString()
+    };
+  } catch (error) {
+    return {
+      ...receipt,
+      state: "arc_failed_retryable",
+      chainId: config.chainId,
+      error: error instanceof Error ? error.message : "Arc notarization failed.",
+      updatedAt: new Date().toISOString()
+    };
+  }
 }

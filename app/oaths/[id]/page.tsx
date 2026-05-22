@@ -11,6 +11,8 @@ import { ProofChecklist } from "@/components/oath/proof-checklist";
 import { SettlementReceipt } from "@/components/oath/settlement-receipt";
 import { getOathBundle } from "@/lib/data/store";
 
+export const dynamic = "force-dynamic";
+
 export default async function OathPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const bundle = await getOathBundle(id);
@@ -42,7 +44,7 @@ export default async function OathPage({ params }: { params: Promise<{ id: strin
           <EvidenceForm oathId={bundle.oath.id} requests={bundle.requests} />
           <form className="panel stack" action={`/api/oaths/${bundle.oath.id}/review`} method="post">
             <h2 className="section-title">Operator controls</h2>
-            <p className="tiny muted">Local demo invite defaults to local-admin. Production must set ADMIN_INVITE_CODE.</p>
+            <p className="tiny muted">Local operator invite defaults to local-admin. Production must set ADMIN_INVITE_CODE.</p>
             <label>
               Operator label
               <input name="actorLabel" defaultValue="0ath operator" />

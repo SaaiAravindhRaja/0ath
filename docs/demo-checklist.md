@@ -21,8 +21,9 @@
 ## Gate 4: Evidence Safety
 
 - Status: implemented locally.
-- Required: write actions need invite/admin code; evidence is classified before display.
-- Local invite code: `local-admin`.
+- Required: write actions need participant/admin code; evidence is classified before display.
+- Local participant invite code: `local-invite`.
+- Local operator invite code: `local-admin`.
 
 ## Gate 5: Demo Freeze
 

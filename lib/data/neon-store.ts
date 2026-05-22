@@ -1,6 +1,6 @@
 export function neonStoreUnavailable() {
   return {
     ok: false as const,
-    error: "Neon persistence requires DATABASE_URL. Local file-backed store is active until deployment secrets are configured."
+    error: "Durable production persistence is not configured. Local file-backed writes are disabled outside demo mode."
   };
 }
