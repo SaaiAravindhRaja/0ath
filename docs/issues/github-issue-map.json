@@ -1,0 +1,744 @@
+{
+  "created": {
+    "ISSUE-000": {
+      "number": 1,
+      "rest_id": 4502626531,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/1"
+    },
+    "ISSUE-001": {
+      "number": 2,
+      "rest_id": 4502626650,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/2"
+    },
+    "ISSUE-002": {
+      "number": 3,
+      "rest_id": 4502626823,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/3"
+    },
+    "ISSUE-003": {
+      "number": 4,
+      "rest_id": 4502626960,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/4"
+    },
+    "ISSUE-004": {
+      "number": 5,
+      "rest_id": 4502627052,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/5"
+    },
+    "ISSUE-005": {
+      "number": 6,
+      "rest_id": 4502627194,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/6"
+    },
+    "ISSUE-006": {
+      "number": 7,
+      "rest_id": 4502627327,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/7"
+    },
+    "ISSUE-007": {
+      "number": 8,
+      "rest_id": 4502627454,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/8"
+    },
+    "ISSUE-008": {
+      "number": 9,
+      "rest_id": 4502627580,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/9"
+    },
+    "ISSUE-009": {
+      "number": 10,
+      "rest_id": 4502627717,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/10"
+    },
+    "ISSUE-010": {
+      "number": 11,
+      "rest_id": 4502628004,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/11"
+    },
+    "ISSUE-011": {
+      "number": 12,
+      "rest_id": 4502628117,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/12"
+    },
+    "ISSUE-012": {
+      "number": 13,
+      "rest_id": 4502628231,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/13"
+    },
+    "ISSUE-013": {
+      "number": 14,
+      "rest_id": 4502628453,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/14"
+    },
+    "ISSUE-014": {
+      "number": 15,
+      "rest_id": 4502628569,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/15"
+    },
+    "ISSUE-015": {
+      "number": 16,
+      "rest_id": 4502628718,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/16"
+    },
+    "ISSUE-016": {
+      "number": 17,
+      "rest_id": 4502628842,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/17"
+    },
+    "ISSUE-017": {
+      "number": 18,
+      "rest_id": 4502628977,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/18"
+    },
+    "ISSUE-018": {
+      "number": 19,
+      "rest_id": 4502629203,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/19"
+    },
+    "ISSUE-019": {
+      "number": 20,
+      "rest_id": 4502629334,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/20"
+    },
+    "ISSUE-020": {
+      "number": 21,
+      "rest_id": 4502629459,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/21"
+    },
+    "ISSUE-021": {
+      "number": 22,
+      "rest_id": 4502629599,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/22"
+    },
+    "ISSUE-022": {
+      "number": 23,
+      "rest_id": 4502629850,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/23"
+    },
+    "ISSUE-023": {
+      "number": 24,
+      "rest_id": 4502629975,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/24"
+    },
+    "ISSUE-024": {
+      "number": 25,
+      "rest_id": 4502630134,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/25"
+    },
+    "ISSUE-025": {
+      "number": 26,
+      "rest_id": 4502630267,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/26"
+    },
+    "ISSUE-026": {
+      "number": 27,
+      "rest_id": 4502630401,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/27"
+    },
+    "ISSUE-027": {
+      "number": 28,
+      "rest_id": 4502630544,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/28"
+    },
+    "ISSUE-028": {
+      "number": 29,
+      "rest_id": 4502630664,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/29"
+    },
+    "ISSUE-029": {
+      "number": 30,
+      "rest_id": 4502630754,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/30"
+    },
+    "ISSUE-030": {
+      "number": 31,
+      "rest_id": 4502630879,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/31"
+    },
+    "ISSUE-031": {
+      "number": 32,
+      "rest_id": 4502631000,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/32"
+    },
+    "ISSUE-032": {
+      "number": 33,
+      "rest_id": 4502631141,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/33"
+    },
+    "ISSUE-033": {
+      "number": 34,
+      "rest_id": 4502631332,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/34"
+    },
+    "ISSUE-034": {
+      "number": 35,
+      "rest_id": 4502631505,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/35"
+    },
+    "ISSUE-035": {
+      "number": 36,
+      "rest_id": 4502631648,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/36"
+    },
+    "ISSUE-036": {
+      "number": 37,
+      "rest_id": 4502631781,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/37"
+    },
+    "ISSUE-037": {
+      "number": 38,
+      "rest_id": 4502631888,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/38"
+    },
+    "ISSUE-038": {
+      "number": 39,
+      "rest_id": 4502632064,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/39"
+    },
+    "ISSUE-039": {
+      "number": 40,
+      "rest_id": 4502632168,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/40"
+    },
+    "ISSUE-040": {
+      "number": 41,
+      "rest_id": 4502632310,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/41"
+    },
+    "ISSUE-041": {
+      "number": 42,
+      "rest_id": 4502632434,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/42"
+    },
+    "ISSUE-042": {
+      "number": 43,
+      "rest_id": 4502632608,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/43"
+    },
+    "ISSUE-043": {
+      "number": 44,
+      "rest_id": 4502632795,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/44"
+    },
+    "ISSUE-044": {
+      "number": 45,
+      "rest_id": 4502632900,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/45"
+    },
+    "ISSUE-045": {
+      "number": 46,
+      "rest_id": 4502633017,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/46"
+    },
+    "ISSUE-046": {
+      "number": 47,
+      "rest_id": 4502633183,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/47"
+    },
+    "ISSUE-047": {
+      "number": 48,
+      "rest_id": 4502633307,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/48"
+    },
+    "ISSUE-048": {
+      "number": 49,
+      "rest_id": 4502633603,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/49"
+    },
+    "ISSUE-049": {
+      "number": 50,
+      "rest_id": 4502633703,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/50"
+    },
+    "ISSUE-050": {
+      "number": 51,
+      "rest_id": 4502633817,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/51"
+    },
+    "ISSUE-051": {
+      "number": 52,
+      "rest_id": 4502633955,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/52"
+    },
+    "ISSUE-052": {
+      "number": 53,
+      "rest_id": 4502634072,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/53"
+    },
+    "ISSUE-053": {
+      "number": 54,
+      "rest_id": 4502634247,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/54"
+    },
+    "ISSUE-054": {
+      "number": 55,
+      "rest_id": 4502634356,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/55"
+    },
+    "ISSUE-055": {
+      "number": 56,
+      "rest_id": 4502634453,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/56"
+    },
+    "ISSUE-056": {
+      "number": 57,
+      "rest_id": 4502634597,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/57"
+    },
+    "ISSUE-057": {
+      "number": 58,
+      "rest_id": 4502634739,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/58"
+    },
+    "ISSUE-058": {
+      "number": 59,
+      "rest_id": 4502634873,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/59"
+    },
+    "ISSUE-059": {
+      "number": 60,
+      "rest_id": 4502635011,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/60"
+    },
+    "ISSUE-060": {
+      "number": 61,
+      "rest_id": 4502635150,
+      "reused": false,
+      "url": "https://github.com/SaaiAravindhRaja/0ath/issues/61"
+    }
+  },
+  "deps": {
+    "ISSUE-000": [],
+    "ISSUE-001": [],
+    "ISSUE-002": [
+      "ISSUE-001"
+    ],
+    "ISSUE-003": [
+      "ISSUE-002"
+    ],
+    "ISSUE-004": [
+      "ISSUE-003"
+    ],
+    "ISSUE-005": [
+      "ISSUE-003"
+    ],
+    "ISSUE-006": [
+      "ISSUE-003"
+    ],
+    "ISSUE-007": [
+      "ISSUE-003"
+    ],
+    "ISSUE-008": [
+      "ISSUE-007"
+    ],
+    "ISSUE-009": [
+      "ISSUE-007"
+    ],
+    "ISSUE-010": [
+      "ISSUE-007",
+      "ISSUE-008",
+      "ISSUE-009"
+    ],
+    "ISSUE-011": [
+      "ISSUE-010"
+    ],
+    "ISSUE-012": [
+      "ISSUE-010",
+      "ISSUE-011"
+    ],
+    "ISSUE-013": [
+      "ISSUE-010"
+    ],
+    "ISSUE-014": [
+      "ISSUE-010",
+      "ISSUE-011"
+    ],
+    "ISSUE-015": [
+      "ISSUE-002"
+    ],
+    "ISSUE-016": [
+      "ISSUE-015",
+      "ISSUE-012"
+    ],
+    "ISSUE-017": [
+      "ISSUE-015",
+      "ISSUE-009"
+    ],
+    "ISSUE-018": [
+      "ISSUE-015",
+      "ISSUE-012"
+    ],
+    "ISSUE-019": [
+      "ISSUE-017",
+      "ISSUE-018"
+    ],
+    "ISSUE-020": [
+      "ISSUE-017",
+      "ISSUE-018"
+    ],
+    "ISSUE-021": [
+      "ISSUE-016",
+      "ISSUE-018",
+      "ISSUE-019",
+      "ISSUE-020"
+    ],
+    "ISSUE-022": [
+      "ISSUE-008",
+      "ISSUE-010"
+    ],
+    "ISSUE-023": [
+      "ISSUE-010",
+      "ISSUE-022"
+    ],
+    "ISSUE-024": [
+      "ISSUE-007"
+    ],
+    "ISSUE-025": [
+      "ISSUE-015",
+      "ISSUE-023",
+      "ISSUE-024"
+    ],
+    "ISSUE-026": [
+      "ISSUE-023",
+      "ISSUE-024",
+      "ISSUE-025"
+    ],
+    "ISSUE-027": [
+      "ISSUE-010",
+      "ISSUE-022"
+    ],
+    "ISSUE-028": [
+      "ISSUE-018",
+      "ISSUE-027"
+    ],
+    "ISSUE-029": [
+      "ISSUE-022",
+      "ISSUE-027"
+    ],
+    "ISSUE-030": [
+      "ISSUE-008",
+      "ISSUE-014",
+      "ISSUE-027"
+    ],
+    "ISSUE-031": [
+      "ISSUE-010",
+      "ISSUE-022"
+    ],
+    "ISSUE-032": [
+      "ISSUE-009",
+      "ISSUE-031"
+    ],
+    "ISSUE-033": [
+      "ISSUE-018",
+      "ISSUE-031",
+      "ISSUE-032"
+    ],
+    "ISSUE-034": [
+      "ISSUE-018",
+      "ISSUE-032"
+    ],
+    "ISSUE-035": [
+      "ISSUE-009",
+      "ISSUE-031",
+      "ISSUE-034"
+    ],
+    "ISSUE-036": [
+      "ISSUE-032",
+      "ISSUE-034"
+    ],
+    "ISSUE-037": [
+      "ISSUE-010",
+      "ISSUE-022"
+    ],
+    "ISSUE-038": [
+      "ISSUE-024",
+      "ISSUE-030",
+      "ISSUE-035"
+    ],
+    "ISSUE-039": [
+      "ISSUE-032",
+      "ISSUE-035",
+      "ISSUE-038"
+    ],
+    "ISSUE-040": [
+      "ISSUE-009",
+      "ISSUE-039"
+    ],
+    "ISSUE-041": [
+      "ISSUE-035",
+      "ISSUE-039"
+    ],
+    "ISSUE-042": [
+      "ISSUE-011",
+      "ISSUE-038",
+      "ISSUE-039"
+    ],
+    "ISSUE-043": [
+      "ISSUE-037",
+      "ISSUE-038",
+      "ISSUE-039",
+      "ISSUE-040",
+      "ISSUE-041",
+      "ISSUE-042"
+    ],
+    "ISSUE-044": [
+      "ISSUE-005",
+      "ISSUE-009"
+    ],
+    "ISSUE-045": [
+      "ISSUE-044"
+    ],
+    "ISSUE-046": [
+      "ISSUE-013",
+      "ISSUE-045"
+    ],
+    "ISSUE-047": [
+      "ISSUE-039",
+      "ISSUE-040",
+      "ISSUE-046"
+    ],
+    "ISSUE-048": [
+      "ISSUE-020",
+      "ISSUE-047"
+    ],
+    "ISSUE-049": [
+      "ISSUE-045",
+      "ISSUE-047",
+      "ISSUE-048"
+    ],
+    "ISSUE-050": [
+      "ISSUE-014",
+      "ISSUE-016"
+    ],
+    "ISSUE-051": [
+      "ISSUE-050"
+    ],
+    "ISSUE-052": [
+      "ISSUE-043",
+      "ISSUE-048"
+    ],
+    "ISSUE-053": [
+      "ISSUE-050",
+      "ISSUE-052"
+    ],
+    "ISSUE-054": [
+      "ISSUE-006",
+      "ISSUE-049",
+      "ISSUE-052"
+    ],
+    "ISSUE-055": [
+      "ISSUE-021",
+      "ISSUE-028",
+      "ISSUE-033",
+      "ISSUE-050"
+    ],
+    "ISSUE-056": [
+      "ISSUE-049",
+      "ISSUE-052",
+      "ISSUE-054",
+      "ISSUE-055"
+    ],
+    "ISSUE-057": [
+      "ISSUE-029",
+      "ISSUE-036",
+      "ISSUE-053"
+    ],
+    "ISSUE-058": [
+      "ISSUE-035"
+    ],
+    "ISSUE-059": [
+      "ISSUE-058"
+    ],
+    "ISSUE-060": [
+      "ISSUE-058",
+      "ISSUE-059"
+    ]
+  },
+  "phases": {
+    "ISSUE-000": "tracker",
+    "ISSUE-001": "bootstrap",
+    "ISSUE-002": "bootstrap",
+    "ISSUE-003": "bootstrap",
+    "ISSUE-004": "bootstrap",
+    "ISSUE-005": "bootstrap",
+    "ISSUE-006": "bootstrap",
+    "ISSUE-007": "data",
+    "ISSUE-008": "data",
+    "ISSUE-009": "data",
+    "ISSUE-010": "data",
+    "ISSUE-011": "data",
+    "ISSUE-012": "data",
+    "ISSUE-013": "data",
+    "ISSUE-014": "data",
+    "ISSUE-015": "surface",
+    "ISSUE-016": "surface",
+    "ISSUE-017": "surface",
+    "ISSUE-018": "surface",
+    "ISSUE-019": "surface",
+    "ISSUE-020": "surface",
+    "ISSUE-021": "surface",
+    "ISSUE-022": "identity",
+    "ISSUE-023": "creation",
+    "ISSUE-024": "creation",
+    "ISSUE-025": "creation",
+    "ISSUE-026": "creation",
+    "ISSUE-027": "positions",
+    "ISSUE-028": "positions",
+    "ISSUE-029": "positions",
+    "ISSUE-030": "positions",
+    "ISSUE-031": "evidence",
+    "ISSUE-032": "evidence",
+    "ISSUE-033": "evidence",
+    "ISSUE-034": "evidence",
+    "ISSUE-035": "evidence",
+    "ISSUE-036": "evidence",
+    "ISSUE-037": "agent",
+    "ISSUE-038": "agent",
+    "ISSUE-039": "agent",
+    "ISSUE-040": "agent",
+    "ISSUE-041": "agent",
+    "ISSUE-042": "agent",
+    "ISSUE-043": "agent",
+    "ISSUE-044": "arc",
+    "ISSUE-045": "arc",
+    "ISSUE-046": "arc",
+    "ISSUE-047": "arc",
+    "ISSUE-048": "arc",
+    "ISSUE-049": "arc",
+    "ISSUE-050": "submission",
+    "ISSUE-051": "submission",
+    "ISSUE-052": "submission",
+    "ISSUE-053": "submission",
+    "ISSUE-054": "submission",
+    "ISSUE-055": "submission",
+    "ISSUE-056": "submission",
+    "ISSUE-057": "submission",
+    "ISSUE-058": "stretch",
+    "ISSUE-059": "stretch",
+    "ISSUE-060": "stretch"
+  },
+  "repo": "SaaiAravindhRaja/0ath",
+  "titles": {
+    "ISSUE-000": "Track 0ath agent-operated proof markets",
+    "ISSUE-001": "Initialize repo hygiene and environment placeholders",
+    "ISSUE-002": "Scaffold the Next.js app baseline",
+    "ISSUE-003": "Wire canonical scripts and check command",
+    "ISSUE-004": "Add Vitest and Playwright test harnesses",
+    "ISSUE-005": "Add Foundry contract workspace baseline",
+    "ISSUE-006": "Write the initial README project skeleton",
+    "ISSUE-007": "Define core oath lifecycle domain types",
+    "ISSUE-008": "Define participant identity and role model",
+    "ISSUE-009": "Define evidence, review, request, and receipt models",
+    "ISSUE-010": "Create the typed store interface",
+    "ISSUE-011": "Add deterministic seed data and labels",
+    "ISSUE-012": "Implement local read-only seed store",
+    "ISSUE-013": "Add Neon schema and production store adapter",
+    "ISSUE-014": "Implement traction metrics invariants",
+    "ISSUE-015": "Build app layout and global visual system",
+    "ISSUE-016": "Build public entry page states",
+    "ISSUE-017": "Build shared status and receipt label components",
+    "ISSUE-018": "Build public oath page shell",
+    "ISSUE-019": "Build oath scorecard and proof checklist",
+    "ISSUE-020": "Build commitment ledger and receipt display",
+    "ISSUE-021": "Add responsive public surface browser coverage",
+    "ISSUE-022": "Implement invite/admin identity gate",
+    "ISSUE-023": "Implement oath creation API route",
+    "ISSUE-024": "Implement deterministic claim-quality agent",
+    "ISSUE-025": "Build oath creation and revision UI",
+    "ISSUE-026": "Cover oath creation publish and draft flows",
+    "ISSUE-027": "Implement position API with idempotency",
+    "ISSUE-028": "Build backing and challenge UI",
+    "ISSUE-029": "Add abuse controls for write actions",
+    "ISSUE-030": "Enforce participant deduplication in metrics",
+    "ISSUE-031": "Implement evidence submission API route",
+    "ISSUE-032": "Implement evidence safety classification",
+    "ISSUE-033": "Build evidence submission form and warnings",
+    "ISSUE-034": "Build inert evidence timeline rendering",
+    "ISSUE-035": "Implement evidence request matching states",
+    "ISSUE-036": "Add redaction and removal path",
+    "ISSUE-037": "Lock review and resolve route authorization",
+    "ISSUE-038": "Implement market-operator outputs",
+    "ISSUE-039": "Implement deterministic resolution policy",
+    "ISSUE-040": "Store reasoning traces with policy hashes",
+    "ISSUE-041": "Close evidence requests through review decisions",
+    "ISSUE-042": "Seed and render downgrade/block scenario",
+    "ISSUE-043": "Cover review, resolution, and downgrade end to end",
+    "ISSUE-044": "Implement receipt-only Arc contract event",
+    "ISSUE-045": "Add Arc deploy script and environment runbook",
+    "ISSUE-046": "Implement server-only Arc config boundary",
+    "ISSUE-047": "Implement receipt adapter lifecycle",
+    "ISSUE-048": "Cover Arc receipt adapter and display states",
+    "ISSUE-049": "Produce one live Arc testnet receipt",
+    "ISSUE-050": "Build traction dashboard metrics UI",
+    "ISSUE-051": "Add dashboard empty, failure, and mobile states",
+    "ISSUE-052": "Write demo checklist with stop gates",
+    "ISSUE-053": "Write traction log and outreach drafts",
+    "ISSUE-054": "Finish README judge path and limitations",
+    "ISSUE-055": "Run accessibility pass on core flows",
+    "ISSUE-056": "Freeze demo route and production evidence snapshot",
+    "ISSUE-057": "Run external outreach after Gate 4",
+    "ISSUE-058": "Add evidence bounty UI shell",
+    "ISSUE-059": "Prototype Circle Nanopayments adapter",
+    "ISSUE-060": "Add bounty invariant tests"
+  }
+}
