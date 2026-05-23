@@ -14,6 +14,11 @@ export default async function HomePage() {
     <div className="container">
       <section className="hero">
         <div className="hero-primary stack">
+          <div className="market-kicker">
+            <span>public market board</span>
+            <span>arc testnet</span>
+            <span>usdc demo ledger</span>
+          </div>
           <h1>Proof-of-ship markets for Agora builders</h1>
           <p className="lede">
             Teams make public USDC-denominated oaths. Participants back or challenge them. An agent verifies behavior-level evidence and prepares Arc testnet receipt notarization.
