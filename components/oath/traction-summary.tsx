@@ -5,7 +5,7 @@ export function TractionSummary({ metrics }: { metrics: ReturnType<typeof metric
     <div className="metric-row" aria-label="Traction summary">
       <div className="metric">
         <strong>{metrics.realParticipants}</strong>
-        <span>real participants</span>
+        <span>participants</span>
       </div>
       <div className="metric">
         <strong>{metrics.backingActions}</strong>

@@ -15,12 +15,12 @@ export function OathList({ oaths }: { oaths: Oath[] }) {
   return (
     <div className="stack">
       {oaths.map((oath) => (
-        <Link className="card stack" href={`/oaths/${oath.id}`} key={oath.id}>
-          <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "start" }}>
+        <Link className="oath-row stack" href={`/oaths/${oath.id}`} key={oath.id}>
+          <div className="oath-row-header">
             <strong>{oath.title}</strong>
             <StatusBadge status={oath.status} />
           </div>
-          <p className="muted" style={{ margin: 0 }}>
+          <p className="muted">
             {oath.claim}
           </p>
           <span className="tiny muted">deadline {new Date(oath.deadline).toLocaleString()}</span>

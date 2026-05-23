@@ -13,12 +13,12 @@ export default async function HomePage() {
   return (
     <div className="container">
       <section className="hero">
-        <div className="panel stack">
-          <h1>Proof-of-ship markets for Agora builders.</h1>
+        <div className="hero-primary stack">
+          <h1>Proof-of-ship markets for Agora builders</h1>
           <p className="lede">
             Teams make public USDC-denominated oaths. Participants back or challenge them. An agent verifies behavior-level evidence and prepares Arc testnet receipt notarization.
           </p>
-          <div className="nav">
+          <div className="hero-actions">
             <Link className="button primary" href="/oaths/new">
               Create oath
             </Link>
@@ -32,14 +32,17 @@ export default async function HomePage() {
             </Link>
           </div>
         </div>
-        <div className="panel stack">
+        <div className="hero-aside stack">
           <h2 className="section-title">Judge path</h2>
-          <p className="muted">Open an oath, inspect proof requests, back or challenge with demo USDC, submit evidence, run agent review, then inspect the receipt state.</p>
+          <p className="muted">Inspect an oath, submit proof, run agent review, then follow the receipt state from app ledger to ArcScan.</p>
           <TractionSummary metrics={metrics} />
         </div>
       </section>
-      <section className="stack">
-        <h2 className="section-title">Active oaths</h2>
+      <section className="market-section stack">
+        <div className="section-heading">
+          <h2 className="section-title">Active oaths</h2>
+          <p className="muted">Claims stay open until evidence, challenges, and agent review converge.</p>
+        </div>
         <OathList oaths={state.oaths} />
       </section>
     </div>
