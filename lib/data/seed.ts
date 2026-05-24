@@ -41,7 +41,7 @@ export const seedState: DataState = {
       label: "Live Arc receipt",
       canonicalLabel: "live-arc-receipt",
       roles: ["contributor"],
-      realParticipant: true,
+      realParticipant: false,
       verifiedBy: "system",
       source: "live"
     },
@@ -50,7 +50,7 @@ export const seedState: DataState = {
       label: "Demo reviewer",
       canonicalLabel: "demo-reviewer",
       roles: ["backer"],
-      realParticipant: true,
+      realParticipant: false,
       verifiedBy: "admin",
       source: "live"
     },
@@ -59,7 +59,7 @@ export const seedState: DataState = {
       label: "Agora tester",
       canonicalLabel: "agora-tester",
       roles: ["challenger"],
-      realParticipant: true,
+      realParticipant: false,
       verifiedBy: "admin",
       source: "live"
     }

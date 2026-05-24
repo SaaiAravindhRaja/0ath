@@ -2,7 +2,7 @@
 
 ## Gate 1: Builder Supply
 
-- Status: demo gate met with seeded/manual participant entries; pending more external outreach.
+- Status: not met yet; Arc proof is live, but user traction still needs named testers.
 - Pass condition: at least 3 real Agora/Canteen/Arc participants or teams interact with 0ath.
 - Current fallback: lead with the judge-first proof surface and clearly label demo-store persistence.
 

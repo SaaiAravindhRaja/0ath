@@ -16,7 +16,10 @@ describe("traction metrics", () => {
   });
 
   it("marks the traction gate met when three real participants are present", () => {
-    const metrics = metricsFromState(seedState);
+    const metrics = metricsFromState({
+      ...seedState,
+      participants: seedState.participants.map((participant, index) => ({ ...participant, realParticipant: index < 3 }))
+    });
     expect(metrics.realParticipants).toBe(3);
     expect(metrics.tractionGateMet).toBe(true);
   });
