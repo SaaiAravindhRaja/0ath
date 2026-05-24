@@ -38,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </Link>
               <nav className="nav" aria-label="Primary">
                 <Link href="/oaths/new">New oath</Link>
+                <Link href="/judge">Judge</Link>
                 <Link href="/dashboard">Dashboard</Link>
                 <a href="https://github.com/SaaiAravindhRaja/0ath" target="_blank" rel="noreferrer">
                   Repo

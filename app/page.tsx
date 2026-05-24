@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { OathList } from "@/components/oath/oath-list";
+import { StatusBadge } from "@/components/oath/status-badge";
 import { TractionSummary } from "@/components/oath/traction-summary";
 import { metricsFromState, store } from "@/lib/data/store";
 
@@ -9,6 +10,7 @@ export default async function HomePage() {
   const state = await store.getState();
   const metrics = metricsFromState(state);
   const strongest = state.oaths[0];
+  const liveReceipt = state.receipts.find((receipt) => receipt.state === "arc_confirmed");
 
   return (
     <div className="container">
@@ -35,6 +37,9 @@ export default async function HomePage() {
             <Link className="button" href="/dashboard">
               View dashboard
             </Link>
+            <Link className="button" href="/judge">
+              Judge mode
+            </Link>
           </div>
         </div>
         <div className="hero-aside stack">
@@ -43,6 +48,37 @@ export default async function HomePage() {
           <TractionSummary metrics={metrics} />
         </div>
       </section>
+      {liveReceipt ? (
+        <section className="live-receipt panel stack" aria-labelledby="live-receipt-title">
+          <div className="oath-row-header">
+            <div className="stack">
+              <p className="tiny muted">Arc Testnet receipt</p>
+              <h2 id="live-receipt-title" className="section-title">
+                Live receipt recorded on Arc
+              </h2>
+            </div>
+            <StatusBadge status={liveReceipt.state} />
+          </div>
+          <div className="receipt-grid">
+            <div>
+              <span className="tiny muted">contract</span>
+              <a href="https://testnet.arcscan.app/address/0xF045150D3D30cE5a3550e30fC94375AF445819a8" target="_blank" rel="noreferrer">
+                0xF045...19a8
+              </a>
+            </div>
+            <div>
+              <span className="tiny muted">receipt tx</span>
+              <a href={liveReceipt.explorerUrl ?? "#"} target="_blank" rel="noreferrer">
+                {liveReceipt.txHash?.slice(0, 10)}...{liveReceipt.txHash?.slice(-8)}
+              </a>
+            </div>
+            <div>
+              <span className="tiny muted">receipt hash</span>
+              <code>{liveReceipt.receiptHash.slice(0, 18)}...{liveReceipt.receiptHash.slice(-8)}</code>
+            </div>
+          </div>
+        </section>
+      ) : null}
       <section className="market-section stack">
         <div className="section-heading">
           <h2 className="section-title">Active oaths</h2>

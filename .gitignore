@@ -17,6 +17,7 @@ tsconfig.tsbuildinfo
 
 contracts/cache/
 contracts/out/
+contracts/broadcast/
 broadcast/
 
 .data/

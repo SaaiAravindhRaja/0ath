@@ -164,6 +164,14 @@ button.button:hover {
   gap: 14px;
 }
 
+.span-8 {
+  grid-column: span 8;
+}
+
+.span-4 {
+  grid-column: span 4;
+}
+
 .panel,
 .card,
 .oath-row,
@@ -367,6 +375,32 @@ button.button:hover {
   gap: 16px;
 }
 
+.live-receipt {
+  margin-bottom: 24px;
+}
+
+.receipt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: 12px;
+}
+
+.receipt-grid > div {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  border: 1px solid var(--line);
+  background: var(--panel-alt);
+  padding: 11px;
+}
+
+.receipt-grid a,
+.receipt-grid code {
+  overflow-wrap: anywhere;
+  font-family: var(--font-mono), monospace;
+  font-size: 13px;
+}
+
 .oath-row {
   display: grid;
   color: var(--foreground);
@@ -496,6 +530,11 @@ code,
     grid-template-columns: 1fr;
   }
 
+  .span-8,
+  .span-4 {
+    grid-column: auto;
+  }
+
   .topbar-inner {
     padding: 14px 0;
   }
@@ -545,6 +584,10 @@ code,
   }
 
   .metric-row {
+    grid-template-columns: 1fr;
+  }
+
+  .receipt-grid {
     grid-template-columns: 1fr;
   }
 

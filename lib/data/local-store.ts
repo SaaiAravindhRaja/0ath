@@ -9,7 +9,8 @@ import type { Position } from "@/lib/domain/position";
 import type { AgentReview } from "@/lib/domain/review";
 import type { Receipt } from "@/lib/domain/receipt";
 
-const dataPath = path.join(process.cwd(), ".data", "0ath-store.json");
+const dataRoot = process.env.VERCEL ? "/tmp/0ath" : path.join(process.cwd(), ".data");
+const dataPath = path.join(dataRoot, "0ath-store.json");
 let mutationQueue = Promise.resolve();
 
 async function readState(): Promise<DataState> {

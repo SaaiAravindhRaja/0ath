@@ -3,10 +3,11 @@ import { resolveOathProof } from "@/lib/agent/resolution-policy";
 import { seedState } from "@/lib/data/seed";
 
 const oath = seedState.oaths[0];
+const artifactOnlyEvidence = seedState.evidence.filter((item) => item.type === "repo" || item.type === "invocation_log");
 
 describe("resolution policy", () => {
   it("keeps artifact-only proof pending", () => {
-    const result = resolveOathProof(oath, seedState.evidence);
+    const result = resolveOathProof(oath, artifactOnlyEvidence);
     expect(result.status).toBe("pending-evidence");
     expect(result.missingProof).toContain("arc_tx");
   });
@@ -22,7 +23,7 @@ describe("resolution policy", () => {
 
   it("does not fulfill on raw transaction-hash-shaped proof", () => {
     const result = resolveOathProof(oath, [
-      ...seedState.evidence,
+      ...artifactOnlyEvidence,
       { ...seedState.evidence[0], id: "deploy", type: "deployment", value: "https://0ath.vercel.app" },
       { ...seedState.evidence[0], id: "arc", type: "arc_tx", value: `0x${"a".repeat(64)}` }
     ]);

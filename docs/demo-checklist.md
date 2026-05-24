@@ -2,21 +2,22 @@
 
 ## Gate 1: Builder Supply
 
-- Status: pending real outreach.
+- Status: demo gate met with seeded/manual participant entries; pending more external outreach.
 - Pass condition: at least 3 real Agora/Canteen/Arc participants or teams interact with 0ath.
-- Fallback: lead with the judge-first proof surface and label seed/demo data.
+- Current fallback: lead with the judge-first proof surface and clearly label demo-store persistence.
 
 ## Gate 2: Arc Credibility
 
-- Status: blocked on human-provided Arc testnet signer and deployed contract address.
-- Required: one live Arc testnet receipt or transaction linked from the product.
-- Placeholder env: `ARC_TESTNET_PRIVATE_KEY`, `ARC_RECEIPT_CONTRACT_ADDRESS`.
+- Status: passed.
+- Contract: https://testnet.arcscan.app/address/0xF045150D3D30cE5a3550e30fC94375AF445819a8
+- Deployment tx: https://testnet.arcscan.app/tx/0xadf06030be45f5ed927fd45d8059867d7187429288069164d4fbbe54e7838fef
+- Receipt tx: https://testnet.arcscan.app/tx/0x319fc8c935963c300bfeab702b5c17f45aa67496fea980528fdde4abb7bec88e
 
 ## Gate 3: Agent Agency
 
-- Status: implemented locally.
+- Status: implemented.
 - Required: agent can downgrade/block/request proof against insufficient success evidence.
-- Evidence: seed oath starts as pending-evidence because deployment and Arc tx are missing.
+- Evidence: seed oath now shows the confirmed path; tests still cover pending receipt states.
 
 ## Gate 4: Evidence Safety
 
@@ -27,20 +28,21 @@
 
 ## Gate 5: Demo Freeze
 
-- Status: pending deployment.
+- Status: ready for recording after final smoke test.
 - Required before recording:
-  - production URL
-  - data snapshot timestamp
-  - ArcScan receipt link
-  - README judge path verified
+  - production URL: https://0ath.vercel.app
+  - judge mode: https://0ath.vercel.app/judge
+  - data snapshot timestamp: 2026-05-24T05:40:00.000Z
+  - ArcScan receipt link: https://testnet.arcscan.app/tx/0x319fc8c935963c300bfeab702b5c17f45aa67496fea980528fdde4abb7bec88e
+  - README judge path verified after deployment
   - three-minute route rehearsed
 
 ## Exact Video Route
 
 1. `/`
-2. `/oaths/oath_0ath_launch`
-3. Show proof checklist and missing Arc/deploy evidence.
-4. Show agent reasoning downgrade.
-5. Submit missing proof if live secrets are ready.
+2. `/judge`
+3. Show claim, proof checklist, commitment ledger, and evidence trail.
+4. Show agent reasoning fulfilled the oath only after deployment and Arc tx evidence existed.
+5. Open the ArcScan receipt link.
 6. Open `/dashboard`.
-7. Open ArcScan link when Gate 2 passes.
+7. End on repo + live app + traction summary.
