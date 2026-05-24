@@ -13,7 +13,7 @@ export function EvidenceTimeline({ evidence, participants }: { evidence: Evidenc
       <p className="tiny muted">Submitted evidence is untrusted and rendered inertly. Screenshots and notes are supporting-only.</p>
       {publicEvidence.map((item) => (
         <div className="card stack" key={item.id}>
-          <div style={{ display: "flex", justifyContent: "space-between", gap: 12 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
             <strong>{item.type}</strong>
             <StatusBadge status={item.state} />
           </div>

@@ -193,6 +193,14 @@ button.button:hover {
   min-width: 0;
 }
 
+.card p,
+.card a,
+.card code,
+.card pre {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 360px;
@@ -494,6 +502,7 @@ code,
 .table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
   font-size: 14px;
 }
 
@@ -503,6 +512,11 @@ code,
   padding: 11px 10px;
   text-align: left;
   vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.table th {
+  width: 34%;
 }
 
 @media (prefers-reduced-motion: reduce) {
