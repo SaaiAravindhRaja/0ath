@@ -1,0 +1,44 @@
+{
+  "name": "0ath",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "build": "next build",
+    "video:still": "remotion still remotion/index.ts Demo out/0ath-demo-still.png --frame=120 --scale=0.5",
+    "video:render": "remotion render remotion/index.ts Demo out/0ath-agora-demo.mp4 --codec=h264 --concurrency=2",
+    "contracts:test": "bash -lc 'if command -v forge >/dev/null 2>&1; then forge test --root contracts; else echo \"forge not installed; skipping contract tests\"; fi'",
+    "contracts:deploy:arc": "bash -lc 'if command -v forge >/dev/null 2>&1; then forge script contracts/script/DeployOathReceipt.s.sol --rpc-url \"$ARC_TESTNET_RPC_URL\" --private-key \"$ARC_TESTNET_PRIVATE_KEY\" --broadcast --root contracts; else echo \"forge not installed\" && exit 1; fi'",
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build && pnpm contracts:test"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "clsx": "^2.1.1",
+    "next": "^16.0.7",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "viem": "^2.39.3",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@remotion/cli": "4.0.465",
+    "@tailwindcss/postcss": "^4.1.17",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.0.7",
+    "remotion": "4.0.465",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.14"
+  },
+  "packageManager": "pnpm@10.28.0"
+}

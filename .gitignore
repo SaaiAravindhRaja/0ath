@@ -12,11 +12,16 @@ playwright-report/
 
 *.log
 *.tmp
+.DS_Store
+tsconfig.tsbuildinfo
 
 contracts/cache/
 contracts/out/
+contracts/broadcast/
 broadcast/
 
+.data/
 *.db
 *.sqlite
 *.sqlite3
+.vercel
